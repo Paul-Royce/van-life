@@ -1,11 +1,16 @@
 import React from 'react'
 import imageAbout from "../assets/image-about.jpg"
-import Button from '../UI/Button'
+import HeroButton from '../UI/HeroButton'
 import Footer from '../components/Footer'
+import {motion} from "framer-motion"
 
 const About = () => {
   return (
-    <div className='h-full bg-vanPalette'>
+    <motion.div 
+      className='h-full bg-vanPalette'
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+    >
         <img className='w-full md:w-fit md:ml-6 md:rounded-lg ' src={imageAbout} alt='A person sitting on the roof of a van'/>
         <div className='p-6 space-y-8'>
           <h1 className='text-2xl font-bold '>
@@ -27,12 +32,12 @@ const About = () => {
           {/* section */}
           <div className='flex flex-col gap-5 p-5 md:w-[500px] rounded bg-cusrOrange'>
             <h2 className='text-xl font-bold'>Your destination is waiting.Your van is ready.</h2>
-            <Button path="/vans" addClasses="text-white bg-black w-fit rounded-lg px-2" >Explore our vans</Button>
+            <HeroButton path="/vans" addClasses="text-white bg-black w-fit rounded-lg px-2" >Explore our vans</HeroButton>
           </div>
 
         </div>
         <Footer />
-    </div>
+    </motion.div>
   )
 }
 

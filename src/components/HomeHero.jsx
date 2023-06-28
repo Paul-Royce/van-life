@@ -1,6 +1,6 @@
 import React from 'react'
 import {motion} from "framer-motion"
-import Button from '../UI/Button'
+import HeroButton from '../UI/HeroButton'
 
 
 const HomeHero = () => {
@@ -8,7 +8,6 @@ const HomeHero = () => {
     <div 
       className=' flex flex-col justify-center md:justify-start gap-16 bg-no-repeat bg-cover text-center bg-black mix-blend-multiply text-white p-4 bg-[url("./assets/image-54.jpg")] md:bg-left h-screen'
     >
-        
         <motion.h1 
           className='pt-[0%] md:pt-36 md:text-4xl text-2xl font-bold text-left'
           initial={{x: -300, opacity: 0}}
@@ -26,7 +25,7 @@ const HomeHero = () => {
             Add adventure to your life by joining the #vanlife movement. <br className='hidden md:block' /> 
             Rent the perfect van ot make your perfect road trip.
         </motion.p>
-        <Button color={"rgba(255, 140, 56, 1)"} path="/vans" delay={2.3} initOp={0} animateOp={1}>Find your van</Button>
+        <HeroButton addClasses={"md:w-[50%]"} color={"rgba(255, 140, 56, 1)"} path="/vans" delay={2.3} initOp={0} animateOp={1}>Find your van</HeroButton>
     </div>
   )
 }

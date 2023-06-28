@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {motion} from "framer-motion"
 
-const Button = props => {
+const HeroButton = props => {
   return (
     <motion.button 
-        className={`w-full rounded-sm ${props.addClasses}`}
+        className={`w-full md:w-fit rounded-sm ${props.addClasses}`}
         style={{backgroundColor: props.color}}
         initial={{opacity: props.initOp}}
         animate={{ opacity: props.animateOp}}
@@ -16,4 +16,4 @@ const Button = props => {
   )
 }
 
-export default Button
+export default HeroButton
