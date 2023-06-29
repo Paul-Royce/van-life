@@ -1,17 +1,22 @@
 import React from 'react'
-import CardButton from '../UI/CardButton'
+import CategoryLabel from '../UI/CategoryLabel'
+import { Link } from 'react-router-dom'
 
 const VanItem = props => {
 
   return (
-    <div key={props.key}>
-        <img src={props.image} alt={props.name} />
-        <div className='flex justify-between '>
-            <p>{props.name}</p>
-            <span>${props.price}</span>
+    <div key={props.id}>
+      <Link to={`/vans/${props.id}`}>
+        <img src={props.image} alt={props.name} className='rounded ' />
+        <div className='mt-3 '>
+            <p className='font-bold'>{props.name}</p>
+            <div className='mb-2'>
+              <span>${props.price}</span>
+              <span>/day</span>
+            </div>
         </div>
-        <span className='block mr-0 '>/day</span>
-        <CardButton bgColor={props.checkType}>{props.type}</CardButton>
+        <CategoryLabel bgColor={props.type == "simple" ? "bg-simpleVan" : props.type == "rugged" ? "bg-ruggedVan" : "bg-luxuryVan"}>{props.type}</CategoryLabel>
+      </Link>
     </div>
   )
 }

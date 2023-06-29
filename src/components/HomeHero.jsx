@@ -5,7 +5,10 @@ import HeroButton from '../UI/HeroButton'
 
 const HomeHero = () => {
   return (
-    <div 
+    <motion.div
+    initial={{ opacity: 0}}
+    animate={{ opacity: 1}}
+    transition={{duration: 1, delay: .1}}
       className=' flex flex-col justify-center md:justify-start gap-16 bg-no-repeat bg-cover text-center bg-black mix-blend-multiply text-white p-4 bg-[url("./assets/image-54.jpg")] md:bg-left h-screen'
     >
         <motion.h1 
@@ -25,8 +28,8 @@ const HomeHero = () => {
             Add adventure to your life by joining the #vanlife movement. <br className='hidden md:block' /> 
             Rent the perfect van ot make your perfect road trip.
         </motion.p>
-        <HeroButton addClasses={"md:w-[50%]"} color={"rgba(255, 140, 56, 1)"} path="/vans" delay={2.3} initOp={0} animateOp={1}>Find your van</HeroButton>
-    </div>
+        <HeroButton addClasses={"md:w-[600px]"} color={"rgba(255, 140, 56, 1)"} path="/vans" delay={2.3} initOp={0} animateOp={1}>Find your van</HeroButton>
+    </motion.div>
   )
 }
 

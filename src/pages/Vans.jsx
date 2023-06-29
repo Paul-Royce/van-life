@@ -25,7 +25,7 @@ const Vans = () => {
   console.log(vans);
   return (
     <motion.div 
-      className='h-screen p-5 m-auto bg-vanPalette'
+      className='h-full p-5 m-auto bg-vanPalette'
       initial={{opacity: 0}}
       animate={{opacity: 1}}
     >
@@ -36,20 +36,11 @@ const Vans = () => {
           <FilterButton>Rugged</FilterButton>
           <span className='underline '>Clear filters</span>
         </div>
-        <div className='grid grid-flow-row grid-cols-2 gap-3'>
+        <div className='grid grid-flow-row grid-cols-2 gap-3 md:grid-cols-3'>
           {vans.map(van => {
-            function checkType() {
-              if(van.type == "Simple") {
-                return "bg-simpleVan"
-              } else if (van.type == "Rugged") {
-                return "bg-ruggedVan"
-              } else {
-                return "luxuryVan"
-              }
-            }
+            
             return <VanItem 
-                    key={van.id}
-                    checkType={checkType}
+                    id={van.id}
                     name={van.name}
                     image={van.imageUrl}
                     price={van.price}

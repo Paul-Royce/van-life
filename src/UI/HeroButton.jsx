@@ -5,7 +5,7 @@ import {motion} from "framer-motion"
 const HeroButton = props => {
   return (
     <motion.button 
-        className={`w-full md:w-fit rounded-sm ${props.addClasses}`}
+        className={`w-full md:w-fit text-white rounded-sm ${props.addClasses}`}
         style={{backgroundColor: props.color}}
         initial={{opacity: props.initOp}}
         animate={{ opacity: props.animateOp}}
