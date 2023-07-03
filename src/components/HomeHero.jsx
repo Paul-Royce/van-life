@@ -6,8 +6,8 @@ import HeroButton from '../UI/HeroButton'
 const HomeHero = () => {
   return (
     <motion.div
-    initial={{ opacity: 0}}
-    animate={{ opacity: 1}}
+    initial={{ opacity: 0, scale: 1.01}}
+    animate={{ opacity: 1, scale: 1}}
     transition={{duration: 1, delay: .1}}
       className=' flex flex-col justify-center md:justify-start gap-16 bg-no-repeat bg-cover text-center bg-black mix-blend-multiply text-white p-4 bg-[url("./assets/image-54.jpg")] md:bg-left h-screen'
     >

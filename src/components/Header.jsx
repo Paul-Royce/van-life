@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from "react-router-dom"
+import {Link, NavLink} from "react-router-dom"
 
 function Header() {
     return(
@@ -7,8 +7,24 @@ function Header() {
         <nav className='flex items-center justify-between '>
           <Link to="/" className='text-2xl font-bold'>#VANLIFE</Link>
           <ul className='flex gap-x-10'>
-            <li><Link to="/about" className='duration-200 hover:underline'>About</Link></li>
-            <li><Link to="/vans" className='duration-200 hover:underline'>Vans</Link></li>
+            <li><NavLink 
+              to="/host" 
+              className={({isActive}) => isActive ? 'hover:underline font-bold text-orange-400' : "hover:underline hover:text-orange-300 duration-200"}
+            >
+              Host
+            </NavLink></li>
+            <li><NavLink
+               to="/about" 
+               className={({isActive}) => isActive ? 'hover:underline font-bold text-orange-400' : "hover:underline hover:text-orange-300 duration-200"}
+               >
+                About
+            </NavLink></li>
+            <li><NavLink 
+              to="/vans"
+              className={({isActive}) => isActive ? 'hover:underline font-bold text-orange-400' : "hover:underline hover:text-orange-300 duration-200" }
+              >
+                Vans
+            </NavLink></li>
           </ul>
         </nav>
       </header>
