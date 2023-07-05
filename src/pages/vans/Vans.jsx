@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import {motion} from "framer-motion"
 import FilterButton from '../../UI/FilterButton'
 import VanItem from '../../components/VanItem'
-import Footer from '../../components/Footer'
-
 
 const Vans = () => {
 
@@ -51,7 +49,6 @@ const Vans = () => {
           }) : <h2 className='font-bold '>Loading...</h2>}
         </div>
       </div>
-      <Footer />
     </motion.div>
   )
 }

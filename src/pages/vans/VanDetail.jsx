@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import {motion} from "framer-motion"
 import HeroButton from "../../UI/HeroButton"
-import Footer from "../../components/Footer"
 import {BsArrowLeftShort} from "react-icons/bs"
 import { Link } from "react-router-dom"
 
@@ -33,7 +32,6 @@ const VanDetail = ()=> {
                 <p>{vanDetails.description}</p>
                 <HeroButton addClasses={"mt-3"} color={"rgba(255, 140, 56, 1)"}>Rent this van</HeroButton>
             </div> : <h2 className="text-center mt-60">Loading...</h2>}
-            <Footer />
         </div>
     )
 }

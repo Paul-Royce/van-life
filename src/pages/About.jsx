@@ -1,7 +1,6 @@
 import React from 'react'
 import imageAbout from "../assets/image-about.jpg"
 import HeroButton from '../UI/HeroButton'
-import Footer from '../components/Footer'
 import {motion} from "framer-motion"
 
 const About = () => {
@@ -54,7 +53,6 @@ const About = () => {
           </motion.div>
 
         </div>
-        <Footer />
     </motion.div>
   )
 }

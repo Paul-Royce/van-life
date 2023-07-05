@@ -7,11 +7,11 @@ const VanItem = props => {
   return (
     <div key={props.id}>
       <Link to={`/vans/${props.id}`}>
-        <img src={props.image} alt={props.name} className='rounded ' />
+        <img src={props.image} alt={props.name} className='rounded' />
         <div className='mt-3 '>
             <p className='font-bold'>{props.name}</p>
             <div className='mb-2'>
-              <span>${props.price}</span>
+              <span>${props.price}</span>  {/* check where the onclick happen for the vanDetails component to show */}
               <span>/day</span>
             </div>
         </div>

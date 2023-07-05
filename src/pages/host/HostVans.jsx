@@ -20,7 +20,7 @@ const HostVans = () => {
 
         {hostVansList  ? 
           <div className='grid grid-flow-row gap-4 md:grid-flow-col'>
-            {hostVansList.map(van => (<HostVanItem name={van.name} image={van.imageUrl} price={van.price} />))}
+            {hostVansList.map(van => (<HostVanItem key={van.id} id={van.id} name={van.name} image={van.imageUrl} price={van.price} />))}
           </div> : <h2 className='h-full text-2xl font-bold'>Loading...</h2>
         }
     </div>
