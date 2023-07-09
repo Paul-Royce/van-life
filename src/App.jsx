@@ -14,7 +14,7 @@ import HostVanDetail from './pages/host/HostVanDetail'
 import HostVansInfo from './pages/host/HostVansInfo'
 import HostVansPricing from './pages/host/HostVansPricing'
 import NotFound from "./pages/NotFound"
-import Error from "./components/error"
+import RouteError from "./components/RouteError"
 import HostVansPhotos from './pages/host/HostVansPhotos'
 import "./server"
                         /* i'm using createRoutesElements to use the previous BrowserRouter Syntax, i could use the array of object version instead, look up at react-router documentation to have a better understanding */
@@ -23,7 +23,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="*" element={<NotFound />} />
     <Route index element={<Home />} />  {/* Since this route has an index prop it will be shown when the path will be the same as the parent one */}
     <Route path='about' element={<About />} /> {/* Since about is a child route of another route there is no need to put the / on the path we can right his path as a relative one  */}
-    <Route path='vans' element={<Vans />} errorElement={<Error />} loader={vansLoader} /> 
+    <Route path='vans' element={<Vans />} errorElement={<RouteError />} loader={vansLoader} /> 
     <Route path='vans/:id' element={<VanDetail />} />  
     <Route path='login' element={<Login />} /> 
 

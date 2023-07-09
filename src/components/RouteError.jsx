@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouteError } from 'react-router-dom'
 
-const Error = () => {
+const RouteError = () => {
 
     const routeErr = useRouteError()
     console.log(routeErr)
@@ -14,4 +14,4 @@ const Error = () => {
   )
 }
 
-export default Error
+export default RouteError
