@@ -6,7 +6,7 @@ import {motion} from "framer-motion"
 const About = () => {
   return (
     <motion.div 
-      className='h-full md:h-screen bg-vanPalette'
+      className='h-screen bg-vanPalette'
       initial={{opacity: 0}}
       animate={{opacity: 1}}
     >

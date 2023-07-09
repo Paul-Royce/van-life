@@ -20,8 +20,6 @@ const HostVanDetail = () => {
     fetchVanDetails()
   }, [])
 
-  console.log(vanData);
-
   const activeLink = {
     textDecoration: "underline",
     fontWeight: "bold"

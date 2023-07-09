@@ -6,7 +6,7 @@ const VanItem = props => {
 
   return (
     <div key={props.id}>
-      <Link to={`/vans/${props.id}`}>
+      <Link to={`${props.id}`} state={{search: searchParamsTwo.toString()}}> {/* this coould be an absolute path by writing: "/vans/:${props.id" */}
         <img src={props.image} alt={props.name} className='rounded' />
         <div className='mt-3 '>
             <p className='font-bold'>{props.name}</p>
