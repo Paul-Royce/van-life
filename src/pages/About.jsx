@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import imageAbout from "../assets/image-about.jpg"
 import HeroButton from '../UI/HeroButton'
 import {motion} from "framer-motion"
 
 const About = () => {
+
+  useEffect(()=> {
+    document.title = "#Vanslife | About"
+  }, [])
+  
   return (
     <motion.div 
       className='h-screen bg-vanPalette'

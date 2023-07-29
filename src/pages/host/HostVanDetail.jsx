@@ -1,24 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, NavLink, Link} from 'react-router-dom'
+import { useParams, NavLink, Link, useLoaderData} from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 import {BsArrowLeftShort} from "react-icons/bs"
+import { getVan } from '../../api'
+
+
+export function loader({params}) {
+  return getVan(params.id)
+} 
 
 const HostVanDetail = () => {
 
-  const [vanData, setVanData] = useState([])
-
-  const {id} = useParams()
-
-  function fetchVanDetails() {
-    fetch(`/api/host/vans/${id}`)
-    .then(req => req.json())
-    .then(res => setVanData(res.vans))
-  }
-
-
-  useEffect(()=> {
-    fetchVanDetails()
-  }, [])
+  const vanData = useLoaderData()
 
   const activeLink = {
     textDecoration: "underline",

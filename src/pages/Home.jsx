@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {motion} from "framer-motion"
 import HeroButton from '../UI/HeroButton'
 
 
 const HomeHero = () => {
+
+  useEffect(()=> {
+    document.title = "#Vanslife | Home"
+  }, [])
+  
   return (
     <motion.div
     initial={{ opacity: 0, scale: 1.01}}
