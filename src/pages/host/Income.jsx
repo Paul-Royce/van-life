@@ -25,12 +25,12 @@ const Income = () => {
       </div>
       <img src={Graph} className='mt-4 ' />
 
-      <div className='max-w-lg pb-20 mt-8 text-lg'> 
-        <div className='flex items-center justify-between md:text-lg '> {/* FLEX */}
+      <div className='pb-20 mt-8 text-lg bg-vanPalette'> 
+        <div className='flex items-center justify-between max-w-lg md:text-lg '> {/* FLEX */}
           <p className='font-bold'>Your transactions <span>({transactionsData.length})</span></p>
           <p className='text-base '>Last <span className='font-bold underline '>30 days</span></p>
         </div>
-        <ul className='flex flex-col gap-4 mt-4 text-xl'>
+        <ul className='flex flex-col max-w-lg gap-4 mt-4 text-xl'>
           {transactionsData.map(obj => {
             const {amount, date} = obj
             return <li className='flex items-center justify-between p-2 py-4 bg-white rounded'>
