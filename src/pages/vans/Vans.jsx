@@ -62,7 +62,7 @@ function renderVanElements(vans) {
      })
      return(
       <>
-         <div className='grid grid-flow-row grid-cols-1 gap-3 mt-6 mb-16 sm:grid-cols-2 md:grid-cols-3'>
+         <div className='grid grid-flow-row grid-cols-1 gap-3 mt-6 mb-16 md:pb-36 sm:grid-cols-2 md:grid-cols-3'>
           {vanElements}
         </div>
       </>

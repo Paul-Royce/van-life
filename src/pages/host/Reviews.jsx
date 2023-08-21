@@ -6,7 +6,6 @@ import {ratings, reviewsData} from "./dataReview"
 const Reviews = () => {
 
   const reviewselements = reviewsData.map(review => {
-     
     return(
       <div className='w-auto lg:w-7/12'>
         <div className='flex gap-3 mt-5 '>
@@ -36,7 +35,7 @@ const Reviews = () => {
   
   
   return (
-    <div className='h-screen p-5 m-auto bg-vanPalette'>
+    <div className='h-full p-5 pb-20 m-auto bg-vanPalette'>
       <div className='flex items-center gap-2'>
         <h1 className='text-xl font-bold'>Your Reviews</h1>
         <p>last <span className='font-semibold underline '>30 days</span></p>

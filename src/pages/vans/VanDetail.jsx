@@ -8,7 +8,6 @@ import { Link } from "react-router-dom"
 import { getVan } from "../../api"
 
 export function loader({params}) {
-    console.log(params);
     return defer({vans: getVan(params.id)})
 }
 
@@ -40,8 +39,8 @@ const VanDetail = ()=> {
     }
 
     return(
-        <div className="h-full pb-24 bg-vanPalette">  {/* in the line below i am checking if vanDetails is true before rendering the rest of the component, i could delete it since that i am using react-router loader to make fetch requests, and it implies that this entire component won't even reneder of there is something wrong with the fetch */}
-            <Suspense fallback={<h2 className='flex items-center gap-4 m-auto text-3xl font-bold text-center mt-28'>Loading...<LiaShuttleVanSolid/></h2>}>
+        <div className="h-full pb-44 md:pb-24 bg-vanPalette">  {/* in the line below i am checking if vanDetails is true before rendering the rest of the component, i could delete it since that i am using react-router loader to make fetch requests, and it implies that this entire component won't even reneder of there is something wrong with the fetch */}
+            <Suspense fallback={<h2 className='flex items-center h-screen gap-4 m-auto text-3xl font-bold text-center mt-28'>Loading...<LiaShuttleVanSolid/></h2>}>
                 <Await resolve={vanDetailsPromise.vans}>
                     {renderVanelements}
                 </Await>
