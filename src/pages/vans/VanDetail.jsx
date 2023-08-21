@@ -23,7 +23,7 @@ const VanDetail = ()=> {
     function renderVanelements(vans) {
         return(
             <>
-                <div className="flex flex-col h-screen px-5 gap-y-2">                    {/* This requires some attention to understand it properly */}
+                <div className="flex flex-col px-5 pb-56 bg-vanPalette gap-y-2">                    {/* This requires some attention to understand it properly */}
                     <div className="mb-3 "><Link className='flex items-center gap-x-1' relative="path" to={`..${search}`}><BsArrowLeftShort className="scale-150 " /><span className="underline ">Back to {type} vans</span></Link></div>
                     <motion.img className="rounded md:w-52" src={vans.imageUrl} alt={vans.name} />
                     <span className={`p-1 px-4 duration-150 rounded cursor w-fit my-3 ${vans.type === "rugged" ? "bg-ruggedVan" : vans.type === "simple" ? "bg-simpleVan" : "bg-luxuryVan"} text-white`}>{vans.type}</span>
@@ -39,7 +39,7 @@ const VanDetail = ()=> {
     }
 
     return(
-        <div className="h-full pb-44 md:pb-24 bg-vanPalette">  {/* in the line below i am checking if vanDetails is true before rendering the rest of the component, i could delete it since that i am using react-router loader to make fetch requests, and it implies that this entire component won't even reneder of there is something wrong with the fetch */}
+        <div className="h-full pb-60 md:pb-24 bg-vanPalette">  {/* in the line below i am checking if vanDetails is true before rendering the rest of the component, i could delete it since that i am using react-router loader to make fetch requests, and it implies that this entire component won't even reneder of there is something wrong with the fetch */}
             <Suspense fallback={<h2 className='flex items-center h-screen gap-4 m-auto text-3xl font-bold text-center mt-28'>Loading...<LiaShuttleVanSolid/></h2>}>
                 <Await resolve={vanDetailsPromise.vans}>
                     {renderVanelements}
