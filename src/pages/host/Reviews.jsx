@@ -35,7 +35,7 @@ const Reviews = () => {
   
   
   return (
-    <div className='h-full p-5 pb-20 m-auto bg-vanPalette'>
+    <div className='p-5 m-auto  pb-44 bg-vanPalette'>
       <div className='flex items-center gap-2'>
         <h1 className='text-xl font-bold'>Your Reviews</h1>
         <p>last <span className='font-semibold underline '>30 days</span></p>
@@ -47,7 +47,7 @@ const Reviews = () => {
         {ratingsElement}
       </div>
       <div>
-        <h4 className='mt-5 text-lg font-bold'>Reviews ({reviewsData.length})</h4>
+        <h4 className='pb-20 mt-5 text-lg font-bold'>Reviews ({reviewsData.length})</h4>
         {reviewselements}
       </div>
     </div>
