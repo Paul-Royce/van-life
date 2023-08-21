@@ -32,7 +32,6 @@ export async function getVans() {
             id: doc.id
         }
     })
-    console.log(dataArr)
     return dataArr
 }
 
@@ -55,7 +54,6 @@ export async function getHostVans() {
         id: doc.id
     }
    })
-   console.log("FIREBASE CALLING!")
    return dataArr
 }
 

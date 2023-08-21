@@ -4,7 +4,7 @@ import {BiUserCircle} from "react-icons/bi"
 
 function Header() {
     return(
-      <header className="p-6 bg-vanPalette">
+      <header className="p-4 md:p-6 bg-vanPalette">
         <nav className='flex items-center justify-between '>
           <Link to="/" className='text-2xl font-bold'>#VANLIFE</Link>
           <ul className='flex gap-x-4 md:gap-x-10'>

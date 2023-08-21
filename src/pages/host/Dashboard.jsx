@@ -11,7 +11,7 @@ export function loader() {
 
 const Dashboard = () => {
   return (
-    <div className='p-5 m-auto bg-vanPalette'>
+    <div className='p-5 pb-20 m-auto bg-vanPalette'>
       <div className='p-5 rounded bg-balancesect'>
         <div className='flex items-center justify-between'>
           <div className='space-y-3 '>
@@ -38,7 +38,7 @@ function Score() {
           <p className='font-bold '>Review score</p>
           <p className='flex items-center gap-1 '><AiTwotoneStar className=' text-star'/><span className='font-bold'>5.0</span>/5</p>
         </div>
-        <div className='font-semibold '>
+        <div className='text-base font-semibold'>
           Details
         </div>
       </div>

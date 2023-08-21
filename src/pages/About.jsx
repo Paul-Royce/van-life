@@ -11,7 +11,7 @@ const About = () => {
   
   return (
     <motion.div 
-      className='h-screen bg-vanPalette'
+      className='h-full bg-vanPalette'
       initial={{opacity: 0}}
       animate={{opacity: 1}}
     >
@@ -22,7 +22,7 @@ const About = () => {
           className='w-full md:w-fit md:ml-6 md:rounded-lg ' 
           src={imageAbout} alt='A person sitting on the roof of a van'
         />
-        <div className='p-6 space-y-8'>
+        <div className='p-6 pb-20 space-y-8'>
           <motion.h1
             initial={{x: -200, opacity: 0}}
             animate={{x: 0, opacity: 1}}
