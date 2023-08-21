@@ -25,7 +25,7 @@ const HomeHero = () => {
           You got the travel plans, we got the travel vans.
         </motion.h1>
         <motion.p 
-          className='text-left md:text-lg '
+          className='text-left rounded md:text-lg '
           initial={{opacity: 0}}
           animate={{ opacity: 1}}
           transition={{duration: 1, delay: 1.4}}

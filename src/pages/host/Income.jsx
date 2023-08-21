@@ -2,7 +2,9 @@ import React from 'react'
 
 const Income = () => {
   return (
-    <div className='text-lg font-bold '>Income Page</div>
+    <div className='h-screen p-5 m-auto bg-vanPalette '>
+
+    </div>
   )
 }
 
